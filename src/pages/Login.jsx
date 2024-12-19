@@ -1,10 +1,17 @@
 import { Input } from "../components/Inputs/InputText"
 import { Button } from "../ui/buttons/Button"
 import { Header } from "../components/Layout";
+import { useState } from "react";
 
 export default Login;
 
 function Login () {
+    const [formData, setFormData] = useState({
+        email:"",
+        password:"",
+    })
+    const [error, setError] = useState({});
+    
     return (
         <>
         <Header title="Accueil"/>
