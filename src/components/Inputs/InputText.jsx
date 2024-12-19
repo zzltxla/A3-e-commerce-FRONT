@@ -1,6 +1,6 @@
-export const Input = ({ props, name }) => {
+export const Input = ({ variant, name }) => {
     let inputClass = "";
-    switch (props.variant) {
+    switch (variant) {
         case 'primary':
             inputClass = "input primary";
             break;

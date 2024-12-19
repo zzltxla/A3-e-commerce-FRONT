@@ -1,6 +1,6 @@
-export const Button = ({ props }) => {
+export const Button = ({ variant, children = React.ReactNode }) => {
     let buttonClass = "";
-    switch (props.variant) {
+    switch (variant) {
         case 'primary':
             buttonClass = "primary button";
             break;

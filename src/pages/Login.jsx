@@ -2,9 +2,7 @@ import { Input } from "../components/Inputs/InputText"
 import { Button } from "../ui/buttons/Button"
 
 
-export default dynamic(() => Promise.resolve(Login), {
-    ssr: false,
-});
+export default Login;
 
 function Login () {
     return (

@@ -2,9 +2,7 @@ import { Input } from "../components/Inputs/InputText"
 import { Button } from "../ui/buttons/Button"
 
 
-export default dynamic(() => Promise.resolve(Register), {
-    ssr: false,
-});
+export default Register;
 
 function Register () {
     return (
