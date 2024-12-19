@@ -1,22 +1,29 @@
-import {CartIcon} from '../ui/svg/CartIcon';
-import {AccountIcon} from '../ui/svg/AccountIcon';
+import { CartIcon } from '../ui/svg/CartIcon';
+import { AccountIcon } from '../ui/svg/AccountIcon';
 
-export const Header = ({title}) => {
+export const Header = ({ title }) => {
     document.title = title;
     return (
         <>
-        <header>
-            <ul>
-                <li><a href="#">SHOP.CO</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="">On sale</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><input type="text" placeholder="Rechercher un produit"/></li>
-                <li><a href="#"> <CartIcon/> </a></li>
-                <li><a href="#"><AccountIcon/></a></li>
-            </ul>
-        </header>
+            <header>
+                <div className='brandName_Header'>
+                    <a href="#">SHOP.CO</a>
+                </div>
+                <ul className='category_Header'>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="">On sale</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Brands</a></li>
+                </ul>
+                <div className='searchBar_Header'>
+
+                    <input type="text" placeholder="Rechercher un produit" />
+                </div>
+                <div className='icon_header'>
+                    <a href="#"><CartIcon /></a>
+                    <a href="#"><AccountIcon /></a>
+                </div>
+            </header>
         </>
     )
 }

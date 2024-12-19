@@ -10,10 +10,11 @@ function App() {
     <>
     <Router>
       <Routes>
+      <Route path='' element={<Homepage/>}/>
         <Route path='/' element={<Homepage/>}/>
 
         <Route path='/register' element={<Register/>}/>
-        
+
         <Route path='/login' element={<Login/>}/>
       </Routes>
     </Router>

@@ -120,10 +120,33 @@ html {
 }
 
 header {
-  ul {
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  padding: 4vh 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  li a {
+    color: var(--color-primary);
+  }
+
+  .brandName_Header {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    /* width: 20%; */
+  }
+
+  .category_Header {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 32px;
+  }
+
+  .icon_header {
+    display: flex;
+    gap: 16px;
   }
 }
 
@@ -158,5 +181,5 @@ header {
 }
 .input .search-bar {
   background-color: var(--lightgray);
-  
+
 }
