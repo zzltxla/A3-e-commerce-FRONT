@@ -153,3 +153,10 @@ header {
 .input .error {
   border: var(--red);
 }
+.input .valid {
+  border: var(--green);
+}
+.input .search-bar {
+  background-color: var(--lightgray);
+  
+}
