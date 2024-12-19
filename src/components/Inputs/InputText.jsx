@@ -1,3 +1,5 @@
+import {MagnifyingGlass} from '../../ui/svg/MagnifyingGlass';
+
 export const Input = ({ variant, name }) => {
     let inputClass = "";
     switch (variant) {
@@ -18,6 +20,12 @@ export const Input = ({ variant, name }) => {
             inputClass = "input";
     }
     return (
+        variant === "search-bar" ?
+        <div className={inputClass}>
+            <MagnifyingGlass></MagnifyingGlass>
+            <input type="text" placeholder="Rechercher un produit" />
+        </div>
+        :
         <>
             <p className="input-container">
                 <label htmlFor={ name }>{ name }</label>

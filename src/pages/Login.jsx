@@ -1,13 +1,14 @@
 import { Input } from "../components/Inputs/InputText"
 import { Button } from "../ui/buttons/Button"
-
+import { Header } from "../components/Layout";
 
 export default Login;
 
 function Login () {
     return (
         <>
-            <main>
+        <Header title="Accueil"/>
+            <main className="login-register-main">
                 <div className="form-login-register">
                     <form action="login" method="post">
                         <Input variant="primary" name="email"></Input>

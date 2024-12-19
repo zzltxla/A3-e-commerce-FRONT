@@ -98,6 +98,16 @@ h4 {
   --green: #27ae60;
 }
 
+h1 {
+  font-size: clamp(1.5rem, 1.9991rem + -2.0476vw, 0.15625rem);
+}
+h2 {
+  font-size: clamp(2rem, 2.6732rem + -2.7619vw, 0.1875rem);
+}
+p {
+  font-size: clamp(1rem, 1.3424rem + -1.4048vw, 0.078125rem);
+}
+
 @font-face {
     font-family: "Poppins";
     src: url(../fonts/Poppins\ Medium.woff2);
@@ -150,14 +160,59 @@ header {
   }
 }
 
+
+.login-register-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+}
+
 .form-login-register {
-  background-color: var(--black-40);
+
+  background-color: var(--white);
   border-radius: 15px;
+  border: 1px solid var(--black-40);
+
+  padding: 1.75rem 3rem;
+
   width: fit-content;
   height: fit-content;
   >form {
     display: flex;
     flex-flow: column;
+
+    gap: 1rem;
+
+    >a {
+      font-size: 0.75rem;
+      color: var(--blue);
+    }
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.25rem;
+
+  >label {
+    text-transform: capitalize;
+    margin-left: 1rem;
+  }
+}
+.register-names {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .input {
+    width: fit-content;
+    height: fit-content;
   }
 }
 
@@ -171,6 +226,7 @@ header {
   padding: 0.75rem 1rem;
   border-radius: 3.88rem;
   border: 1px solid var(--black-40);
+  width: 100%;
 }
 
 .input .error {
@@ -179,7 +235,29 @@ header {
 .input .valid {
   border: var(--green);
 }
-.input .search-bar {
-  background-color: var(--lightgray);
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
 
+  max-width: 25rem;
+
+  background-color: var(--lightgray); 
+  border: none;
+  >input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+}
+
+.button {
+  text-align: center;
+
+  border-radius: 3.88rem;
+
+  padding: 0.75rem 1rem;
 }
