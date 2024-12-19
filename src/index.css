@@ -88,9 +88,30 @@ h4 {
     margin-bottom: 0 !important;
 }
 
+:root {
+  --black: #000;
+  --white: #fff;
+  --black-40: #00000040;
+  --lightgray: #F0F0F0;
+  --red: #FF3333;
+  --blue: #2f80ed;
+  --green: #27ae60;
+}
+
 @font-face {
     font-family: "Poppins";
     src: url(../fonts/Poppins\ Medium.woff2);
+    font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins\ ExtraBold.woff2);
+  font-weight: 800;
+}
+
+body {
+  font-family: "Poppins";
+  font-weight: 400;
 }
 
 html {
@@ -104,4 +125,31 @@ header {
     justify-content: space-around;
     align-items: center;
   }
+}
+
+.form-login-register {
+  background-color: var(--black-40);
+  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
+  >form {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.input {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--black);
+
+  background-color: var(--white);
+
+  padding: 0.75rem 1rem;
+  border-radius: 3.88rem;
+  border: 1px solid var(--black-40);
+}
+
+.input .error {
+  border: var(--red);
 }
