@@ -98,4 +98,10 @@ html {
   scroll-snap-type: proximity;
 }
 
-
+header {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
