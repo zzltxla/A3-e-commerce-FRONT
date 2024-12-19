@@ -22,7 +22,7 @@ export const Input = ({ variant, name }) => {
     return (
         variant === "search-bar" ?
         <div className={inputClass}>
-            <MagnifyingGlass></MagnifyingGlass>
+            <MagnifyingGlass/>
             <input type="text" placeholder="Rechercher un produit" />
         </div>
         :
