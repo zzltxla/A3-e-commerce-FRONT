@@ -48,6 +48,10 @@ select {
     font: inherit;
 }
 
+input:focus {
+  outline: none;
+}
+
 /*
     7. Avoid text overflows
   */
@@ -118,6 +122,11 @@ p {
   src: url(../fonts/Poppins\ ExtraBold.woff2);
   font-weight: 800;
 }
+
+.flex-column {
+  flex-direction: column;
+}
+
 
 body {
   font-family: "Poppins";
@@ -251,13 +260,24 @@ header {
     border: none;
     width: 100%;
   }
-
 }
 
-.button {
+button {
   text-align: center;
 
   border-radius: 3.88rem;
 
   padding: 0.75rem 1rem;
+
+}
+.button-primary {
+  background-color: var(--black);
+  color: white;
+  border: none;
+}
+
+.button-secondary {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--lightgray);
 }

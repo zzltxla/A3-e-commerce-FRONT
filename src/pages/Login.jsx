@@ -10,11 +10,11 @@ function Login () {
         <Header title="Accueil"/>
             <main className="login-register-main">
                 <div className="form-login-register">
-                    <form action="login" method="post">
+                    <form action="login" method="post" className="flex-column">
                         <Input variant="primary" name="email"></Input>
                         <Input variant="primary" name="password"></Input>
                         <a href="/register">Don&apos;t have an account yet ? Create one </a>
-                        <Button variant="primary" >Log In</Button>
+                        <Button variant="black" >Log In</Button>
                     </form>
                 </div>
             </main>
