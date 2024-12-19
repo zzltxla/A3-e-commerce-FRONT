@@ -11,7 +11,7 @@ export const Button = ({ props }) => {
 
   return (
     <>
-      <button className={buttonClass}>
+      <button className={buttonClass} >
         {children}
       </button>
     </>
