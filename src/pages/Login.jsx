@@ -1,7 +1,12 @@
 import { Input } from "../components/Inputs/InputText"
 import { Button } from "../ui/buttons/Button"
 
-export default function Login () {
+
+export default dynamic(() => Promise.resolve(Login), {
+    ssr: false,
+});
+
+function Login () {
     return (
         <>
             <main>
@@ -15,5 +20,5 @@ export default function Login () {
                 </div>
             </main>
         </>
-    )
+    );
 }
