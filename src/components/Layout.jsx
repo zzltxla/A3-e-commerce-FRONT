@@ -8,18 +8,18 @@ export const Header = ({ title }) => {
         <>
             <header>
                 <div className='brandName_Header'>
-                    <a href="#">SHOP.CO</a>
+                    <a href="/">SHOP.CO</a>
                 </div>
                 <ul className='category_Header'>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="">On sale</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Brands</a></li>
+                    <li><a href="/">Shop</a></li>
+                    <li><a href="/">On sale</a></li>
+                    <li><a href="/">New Arrivals</a></li>
+                    <li><a href="/">Brands</a></li>
                 </ul>
                 <Input variant="search-bar"/>
                 <div className='icon_header'>
-                    <a href="#"><CartIcon /></a>
-                    <a href="#"><AccountIcon /></a>
+                    <a href="/"><CartIcon /></a>
+                    <a href="/"><AccountIcon /></a>
                 </div>
             </header>
         </>
