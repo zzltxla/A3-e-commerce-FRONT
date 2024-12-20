@@ -6,14 +6,14 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
     2. Remove default margin
   */
 * {
-    margin: 0;
+  margin: 0;
 }
 
 /*
@@ -22,8 +22,8 @@
     4. Improve text rendering
   */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -34,8 +34,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /*
@@ -45,7 +45,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 
@@ -59,7 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /*
@@ -67,7 +67,7 @@ h6 {
   */
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
 
 /* 9. Addendum perso */
@@ -76,17 +76,17 @@ h1,
 h2,
 h3,
 h4 {
-    text-wrap: balance;
+  text-wrap: balance;
 }
 
 :where(ul, ol):not([role="list"]) {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 *> :last-child {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 :root {
@@ -103,18 +103,21 @@ h4 {
 h1 {
   font-size: clamp(1.5rem, 1.9991rem + -2.0476vw, 0.15625rem);
 }
+
 h2 {
   font-size: clamp(2rem, 2.6732rem + -2.7619vw, 0.1875rem);
 }
+
 p {
   font-size: clamp(1rem, 1.3424rem + -1.4048vw, 0.078125rem);
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins\ Medium.woff2);
-    font-weight: 400;
+  font-family: "Poppins";
+  src: url(../fonts/Poppins\ Medium.woff2);
+  font-weight: 400;
 }
+
 @font-face {
   font-family: "Poppins";
   src: url(../fonts/Poppins\ ExtraBold.woff2);
@@ -137,28 +140,34 @@ html {
 }
 
 header {
-  width: 90%;
+  /* width: 90%; */
   height: 100px;
   margin: 0 auto;
-  padding: 4vh 0;
+  margin: 2vh 7vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-
-  li a {
-    color: var(--color-primary);
-  }
 
   .brandName_Header {
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
+
     /* width: 20%; */
+    a {
+      color: var(--black);
+      text-decoration: none;
+    }
   }
 
   .category_Header {
     display: flex;
     gap: 32px;
+
+    li a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
   }
 
   .icon_header {
@@ -167,12 +176,89 @@ header {
   }
 }
 
+.newArrivalsContain {
+  display: flex;
+  flex-direction: column;
+  margin: 0 6vw;
+  padding: 2vh 0;
+  border-bottom: 1px solid var(--black-40);
+
+  h2 {
+    font-size: 36px;
+    margin: 2vh auto;
+  }
+
+  button {
+    margin: 2vh auto;
+  }
+}
+
+.cardProductContain {
+  display: flex;
+  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.cardProduct {
+  img {
+    border-radius: 20px;
+  }
+
+  .titleProduct {
+    padding: 12px 0;
+  }
+
+  .priceProduct {
+    padding: 16px 0;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.topSellingContain {
+  display: flex;
+  flex-direction: column;
+  margin: 0 6vw;
+  padding: 2vh 0;
+
+  h2 {
+    font-size: 36px;
+    margin: 2vh auto;
+  }
+
+  button {
+    margin: 2vh auto;
+  }
+}
+
+footer {
+  background-color: var(--lightgray);
+  padding: 2vh 7vw;
+
+  .h3AContain {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 0;
+    a{
+      text-decoration: none;
+      color: var(--black);
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 
 .login-register-main {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 90vh;
 }
 
@@ -186,6 +272,7 @@ header {
 
   width: fit-content;
   height: fit-content;
+
   >form {
     display: flex;
     flex-flow: column;
@@ -211,6 +298,7 @@ header {
     margin-left: 1rem;
   }
 }
+
 .register-names {
   display: flex;
   align-items: center;
@@ -262,9 +350,10 @@ small {
 
   min-width: 20em;
 
-  background-color: var(--lightgray); 
+  background-color: var(--lightgray);
   border: none;
   border-radius: 3.88rem;
+
   >input {
     background-color: transparent;
     border: none;

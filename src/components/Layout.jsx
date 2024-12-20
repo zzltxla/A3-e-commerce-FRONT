@@ -16,12 +16,28 @@ export const Header = ({ title }) => {
                     <li><a href="#">New Arrivals</a></li>
                     <li><a href="#">Brands</a></li>
                 </ul>
-                <Input variant="search-bar"></Input>
+                <Input variant="search-bar"/>
                 <div className='icon_header'>
                     <a href="#"><CartIcon /></a>
                     <a href="#"><AccountIcon /></a>
                 </div>
             </header>
+        </>
+    )
+}
+
+export const Footer = () => {
+    return (
+        <>
+        <footer>
+            <div className='h3AContain'>
+                <h3>SHOP.CO</h3>
+                <a href="">About us</a>
+                <a href="">Confidentialité</a>
+                <a href="">blablabla</a>
+            </div>
+            <p>© 2021 SHOP.CO. All Rights Reserved</p>
+        </footer>
         </>
     )
 }
