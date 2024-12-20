@@ -1,7 +1,7 @@
 import { CartIcon } from '../ui/svg/CartIcon';
 import { AccountIcon } from '../ui/svg/AccountIcon';
 import { Input } from './Inputs/InputText';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 
 
@@ -10,10 +10,13 @@ export const Header = ({ title }) => {
     document.title = title;
 
     const [modal, setModal] = useState(false);
-
+    const modalRef = useRef(null);
     const toggleModal = () => {
         setModal(!modal);
     }
+
+
+
     return (
         <>
             <header>
@@ -29,16 +32,18 @@ export const Header = ({ title }) => {
                 <Input variant="search-bar" />
                 <div className='icon_header'>
                     <a href="/"><CartIcon /></a>
-                    <a onClick={toggleModal} href="/"><AccountIcon /></a>
-                </div>
-            </header>
-            {modal &&
-                        <div className='modal-content'>
-                            <a href="#">Mon profil</a>
-                            <a href="#">Se déconnecter</a>
-                            <a onClick={toggleModal} href="#">Fermer</a>
-                        </div>
+                    <a onClick={toggleModal} href="#"><AccountIcon /></a>
+                    {modal &&
+                    <div ref={modalRef} className='modal'>
+                        <a href="#">Mon profil</a>
+                        <a href="#">Se déconnecter</a>
+                        <a onClick={toggleModal} href="#">Fermer</a>
+                    </div>
                 }
+                </div>
+                
+            </header>
+
         </>
     )
 }
