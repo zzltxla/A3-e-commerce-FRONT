@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 export function useFormValidation(initialState, validateFn) {
     const [formData, setFormData] = useState(initialState);
     const [error, setError] = useState({});
@@ -21,7 +22,7 @@ export function useFormValidation(initialState, validateFn) {
     const resetForm = () => {
         setFormData(initialState);
         setError({});
-    };  
+    };
 
     return {
         formData,

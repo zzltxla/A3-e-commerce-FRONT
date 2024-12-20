@@ -1,13 +1,16 @@
 import { Input } from "../components/Inputs/InputText"
 import { Button } from "../ui/buttons/Button"
 import { Header } from "../components/Layout";
-import { ValidateRegister } from "../hooks/ValidateRegister";
+import { ValidateIdentification } from "../hooks/ValidateIdentification";
 import { useFormValidation } from "../hooks/FormValidation";
-
+import { register } from "../utility/register";
+import { ToastContainer, toast } from 'react-toastify';
 
 export default Register;
 
 function Register () {
+
+    let notify = (message) => toast(message)
 
     const initialState = {
         firstName: "",
@@ -23,17 +26,21 @@ function Register () {
         handleChange,
         validate,
         resetForm,
-    } = useFormValidation(initialState, ValidateRegister);
+    } = useFormValidation(initialState, ValidateIdentification);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
             console.log("Form submitted successfully:", formData);
+            register(formData);
+            notify("Successfully registered. Welcome !");
             resetForm();
         } else {
+            notify("Oops something went wrong.. Try again !");
             console.log("Validation errors:", error);
         }
     };
+
 
 
     return (
@@ -41,7 +48,7 @@ function Register () {
         <Header title="Accueil"/>
             <main className="login-register-main">
                 <div className="form-login-register">
-                    <form action="login" method="post" className="flex-column" onSubmit={handleSubmit}>
+                    <form action="register" method="post" className="flex-column" onSubmit={handleSubmit}>
                         <div className="register-names">
                             <div>
                                 <Input variant={ !error.firstName ? "primary" : "error" }
@@ -94,7 +101,7 @@ function Register () {
                             ></Input>
                             {error.password && <small className="error">{error.password}</small>}
                         </div>
-
+                        <ToastContainer></ToastContainer>
 
                         <a href="/login">Already have an account ? Log in </a>
 

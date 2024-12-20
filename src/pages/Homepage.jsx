@@ -8,8 +8,7 @@ function Homepage() {
         <>
             <Header title='Accueil' />
             <main>
-
-                <div className='topSellingContain' >
+                <div className='topSellingContain'>
                     <ProductSection
                     href="/login"
                     title="Top Selling"
