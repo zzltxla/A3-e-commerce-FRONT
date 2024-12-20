@@ -2,7 +2,6 @@ import 'ldrs/ring'
 import { hourglass } from 'ldrs'
 
 
-// Default values shown
 
 export const Loader = () => {
     hourglass.register()

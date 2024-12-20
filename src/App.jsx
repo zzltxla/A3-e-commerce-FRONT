@@ -3,7 +3,7 @@ import './App.css'
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 import Register from './pages/Register';
-
+import ProductPage from './pages/ProductPage';
 function App() {
 
   return (
@@ -16,6 +16,8 @@ function App() {
         <Route path='/register' element={<Register/>}/>
 
         <Route path='/login' element={<Login/>}/>
+
+        <Route path='/product' element={<ProductPage/>} ></Route>
       </Routes>
     </Router>
     </>
