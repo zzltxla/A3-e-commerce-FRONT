@@ -3,7 +3,6 @@ import { Button } from "../ui/buttons/Button"
 import { Header } from "../components/Layout";
 import { ValidateRegister } from "../hooks/ValidateRegister";
 import { useFormValidation } from "../hooks/FormValidation";
-import clsx from "clsx";
 
 
 export default Register;

@@ -9,9 +9,6 @@ export default Login;
 
 function Login () {
     const initialState = {
-        firstName: "",
-        lastName: "",
-        phone: "",
         email: "",
         password: "",
     }
