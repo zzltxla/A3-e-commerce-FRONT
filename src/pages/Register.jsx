@@ -31,13 +31,15 @@ function Register () {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            console.log("Form submitted successfully:", formData);
-            register(formData);
-            notify("Successfully registered. Welcome !");
-            resetForm();
-        } else {
-            notify("Oops something went wrong.. Try again !");
-            console.log("Validation errors:", error);
+            try {
+                register(formData);
+                console.log("Form submitted successfully:", formData);
+                notify("Successfully registered. Welcome !");
+                resetForm();
+            } catch (error) {                
+                notify("Oops something went wrong.. Try again !");
+                console.log("Validation errors:", error);
+            }
         }
     };
 
