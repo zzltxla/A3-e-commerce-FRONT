@@ -1,13 +1,13 @@
 import {MagnifyingGlass} from '../../ui/svg/MagnifyingGlass';
 
-export const Input = ({ variant, name }) => {
+export const Input = ({ variant, name, value, onChange, placeholder }) => {
     let inputClass = "";
     switch (variant) {
         case 'primary':
             inputClass = "input primary";
             break;
         case 'error':
-            inputClass = "input error";
+            inputClass = "error";
             break;
         case 'valid':
             inputClass = "input valid";
@@ -23,13 +23,26 @@ export const Input = ({ variant, name }) => {
         variant === "search-bar" ?
         <div className={inputClass}>
             <MagnifyingGlass></MagnifyingGlass>
-            <input type="text" placeholder="Rechercher un produit" />
+            <input 
+            type="text" 
+            placeholder="Rechercher un produit" 
+            value={value}
+            onChange={onChange}
+            />
         </div>
         :
         <>
             <p className="input-container">
                 <label htmlFor={ name }>{ name }</label>
-                <input type="text" className={ inputClass } name={ name } placeholder={name}/>
+                <input 
+                type={name == "password" ? "password" : "text"} 
+                className={ inputClass }
+                name={ name }
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                
+                />
             </p>
         </>
     )
