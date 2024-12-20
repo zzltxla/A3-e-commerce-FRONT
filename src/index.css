@@ -223,16 +223,20 @@ header {
 }
 
 .cardProductContain {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  
   font-weight: 600;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 20px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .cardProduct {
   img {
     border-radius: 20px;
+    width: auto;
+    height: 444px;
   }
 
   .title-product {
@@ -399,7 +403,7 @@ small {
   border-radius: 3.88rem;
 
   padding: 0.75rem 1rem;
-  
+
   transition: scale, 0.3s, .3s ease-in-out;
 
   width: fit-content;

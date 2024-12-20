@@ -2,13 +2,12 @@ import { CardProduct } from "./Product";
 import { Button } from "../../ui/buttons/Button";
 
 
-export const ProductSection = ({href, title}) => {
-    const max = 4;
+export const ProductSection = ({href, title, products}) => {
     let cards = () => {
         let cardArray= [];
-        for (let i = 0; i < max; i++) {
+        for (let i = 0; i < products.length; i++) {
             cardArray.push(
-                <CardProduct key={i} img='image-test.png' title='T-SHIRT WITH TAPE DETAILS' price='50' />
+                <CardProduct key={i} img={products[i].imageUrl} title={products[i].name} price={products[i].price} />
             )
         }
         return cardArray;
