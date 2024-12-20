@@ -140,7 +140,7 @@ html {
 }
 
 header {
-  /* width: 90%; */
+  position: relative;
   height: 100px;
   margin: 0 auto;
   margin: 2vh 7vw;
@@ -176,9 +176,38 @@ header {
   }
 }
 
+/* Modal */
+
+.modal {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 75%;
+  width: fit-content;
+  right: 0;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 15px;
+  border: 1px solid var(--black-40);
+
+  a {
+    text-decoration: none;
+    color: var(--black);
+    text-align: end;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+
 .newArrivalsContain {
   display: flex;
   flex-direction: column;
+  align-items: end;
   margin: 0 6vw;
   padding: 2vh 0;
   border-bottom: 1px solid var(--black-40);
@@ -206,11 +235,11 @@ header {
     border-radius: 20px;
   }
 
-  .titleProduct {
+  .title-product {
     padding: 12px 0;
   }
 
-  .priceProduct {
+  .price-product {
     padding: 16px 0;
   }
 
@@ -243,7 +272,8 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 2vh 0;
-    a{
+
+    a {
       text-decoration: none;
       color: var(--black);
     }
@@ -330,6 +360,7 @@ input.error {
   border: 1px solid var(--red);
   color: red;
 }
+
 input.valid {
   border: 1px solid var(--green);
   color: var(--green);
