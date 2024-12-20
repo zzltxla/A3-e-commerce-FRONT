@@ -28,14 +28,15 @@ function Login () {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            console.log("Form submitted successfully:", formData);
-            login(formData);
-            notify(`Successfully connected ! Welcome back !`);
-            resetForm();
-        } else {
-            notify("Oops something went wrong.. Try again !");
-
-            console.log("Validation errors:", error);
+            try {
+                login(formData);
+                console.log("Form submitted successfully:", formData);
+                notify(`Successfully connected ! Welcome back !`);
+                resetForm();
+            } catch (error) {
+                notify("Oops something went wrong.. Try again !");                
+                console.log("Validation errors:", error);
+            }
         }
     };
 
